@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const fetchQuestions = async () => {
   // Ambil 10 soal, multiple choice
-  const endpoint = 'https://opentdb.com/api.php?amount=10&type=multiple';
+  const endpoint = 'https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple';
   const data = await axios.get(endpoint);
   
   return data.data.results.map((question) => ({
